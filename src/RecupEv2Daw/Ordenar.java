@@ -13,6 +13,18 @@ public class Ordenar {
 		numero1 = teclado.nextInt();
 		System.out.print("Introduce el segundo numero: ");
 		numero2 = teclado.nextInt();
+		mensaje = comprueba(numero1, numero2);
+		System.out.print(mensaje);
+		teclado.close();
+	}
+
+	/**
+	 * @param numero1
+	 * @param numero2
+	 * @return
+	 */
+	public static String comprueba(int numero1, int numero2) {
+		String mensaje;
 		if (numero1 == numero2) {
 			mensaje = "Los dos números son iguales";
 		} else if (numero1 > numero2) {
@@ -20,8 +32,7 @@ public class Ordenar {
 		} else {
 			mensaje = "El numero " + numero2 + " es mayor que " + numero1;
 		}
-		System.out.print(mensaje);
-		teclado.close();
+		return mensaje;
 	}
 
 }
